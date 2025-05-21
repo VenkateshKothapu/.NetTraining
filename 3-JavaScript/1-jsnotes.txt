@@ -1,0 +1,4 @@
+JavaScript
+--------------
+JavaScript is the programming language of the web used to add interactivity to websites
+like buttons, aimations, form validations

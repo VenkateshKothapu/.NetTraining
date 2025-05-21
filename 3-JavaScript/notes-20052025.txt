@@ -1,0 +1,98 @@
+javascript---20/05/2025
+---------------------------
+***important class***
+
+1.Rest parameters imp interview question 
+
+
+Now lets know about what is function-
+---------------------------------------
+
+* A function is a  block of code that performs specific task . You can reuse the function whenever needed 
+
+	
+Why to use function ?
+----------------------
+
+Reuse of code
+Organizing your program better
+Make code easier to understand and maintain
+
+
+Basic Function Syntax
+---------------------------
+
+
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+
+The code to be executed, by the function, is placed inside curly brackets: {}
+
+Syntax
+---------------
+function cars(){
+  console.log( "Ferrari Spider");
+}
+
+
+*function- keyword to declare a function
+*cars    - name of the function
+* ()     - parentheses( used for parameters, if any)
+*{}      - code block that runs when function is called
+
+** Calling the function-  cars();
+
+
+--Functions with Parameters
+--------------------------------
+
+* We can pass data to functions using parameters
+
+      function cars(name){
+           console.log("my fav car is" + name + "!");
+
+
+* Calling function with an argument:
+
+        cars("Ferrari"); // output: My fav car is Ferrari!
+        cars("lexus");   // output: My fav car is Lexus!  
+
+
+
+Functions with return values--
+----------------------------- 
+
+Functions can return values using the (return)keyword.
+
+       function add (a, b){
+           return a + b;
+        }
+ 
+how we use it-
+         
+
+         let sum = add(5,3);
+         console.log(sum); //output :8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

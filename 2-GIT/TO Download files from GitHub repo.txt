@@ -1,0 +1,21 @@
+TO Download files from GitHub repo to our local system 
+ we need to pass certain commands
+
+*This is the command used to clone the repo (git clone URL)
+git clone https://github.com/madanpatakota/JS-Training.git
+
+*Then after we can go into that folder by command cd
+*Then we have to fetch all the files Git fetch -- all
+*we can see the total master and branches there
+*then we can checkout to particular branch we want by command (git checkout -b Madan_14052025)
+
+*Then we have to connect our local repo to remote repo and pull the files
+ the command to connect repo remote
+          [git branch --set-upstream-to=origin/Madan_14052025]
+
+*Now we can pull that files from that branch to our local machine by command
+
+             [git pull]
+*after this we can see the files in our system 
+
+* in this way I downloaded madan anna repo manually by command prompt

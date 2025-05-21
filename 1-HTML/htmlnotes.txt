@@ -1,0 +1,23 @@
+HTML stands for Hyper Text Markup language
+HTML is the standard markup language for creating webpages.
+HTML describes the structure of the web page
+HTML consists of series of elements
+HTML elements tells the browser how to display the content
+
+
+*A Simple HTML document
+-------------------------------
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> this is my first title </title>
+</head>
+<body>
+<h1> this is my first heading </h1>
+<P> this is my first paragraph</p>
+</body>
+</html>
+---------------------------
+
+
