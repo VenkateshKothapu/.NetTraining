@@ -1,0 +1,189 @@
+Function-
+-------------
+ A function is a Block of code that performs a tasks .
+ instead of repeating same code again and again, we put inside the function and call the function whenever needed
+
+
+
+Named functions-
+---------------
+
+A named function is a function that has a name
+ this is the syntax below for named function
+    
+              function functionname(){
+               //code to run      
+              }
+
+example of named function-
+
+              function greet(){
+               console.log("hey how are you!")
+              }
+
+      function-keyword to define function
+      greet   - Name of the function
+      ()      - place to add inputs
+      {}      - block that hold's the functions code
+
+
+
+*how to call a function?
+ we can call(invoke) a function by just write the function name with ()
+                     greet();    // this runs the function
+
+
+ *we can see one example as of now-
+
+          function greet(){
+             console.log("hey how are you");
+          }
+           greet();    //the output will be (hey how are you)
+
+
+***shortcut key to comment and uncomment block of code is(ctrl + / )
+
+now another example I tried for named function according to class 10-jsfile.
+
+ function supercarsdetails(){
+    let cardetails="";
+    cardetails="venky likes:"+"Rangerover";
+    console.log(cardetails);
+    return cardetails;
+   }
+   supercarsdetails();    //output- venky likes:Rangerover
+
+
+-------------------------------------------------------------------------------------------
+
+
+Anonymous function-
+------------------
+
+An Anonymous function is a function without a name.
+we usually store it in a variable.
+
+
+Syntax-
+--------
+
+let greet=function(){
+console.log("hello anonymous function");
+};
+
+here function()-- No name after the function
+greet  ---  is a variable that holds the function
+
+
+*To call (invoke) it
+greet(); // this prints: hello anonymous function
+
+
+
+uses of anonymous function
+--------------------------
+ - They are useful for short tasks.
+ - Reduces the need to define named functions.
+ - common in event handling and callbacks.
+ - Helps keep code clean and flexible. 
+
+
+example of anonymous function-
+------------------------------
+ let greet=function(){
+ console.log("hey how are you");
+ };
+ 
+ greet();   //output: hey how are you
+
+
+now lets practise in vs code-
+-----------------------------
+*example-1
+
+let cars=function(){
+    console.log("venkatesh fav car is Rangerover");
+
+};
+
+cars();
+ 
+
+*example2-
+
+let add =function(a,b){
+    console.log("sum is ",a+b);
+};
+add(5,6);
+
+-------------------------------------------------------------------------------------------
+
+
+        IIFE(Immediately Invoked Function Expression)
+
+*what is an IIFE ?
+  
+An IIFE is a function that runs immediately after it's defined . no need to call it later.
+that's why it is called immediately invoked.
+
+*Basic syntax for IIFE-
+
+        
+          (function(){
+            console.log("hey how are you");
+           })();
+
+              //output:hey how are you               
+
+-function() {.....} -- Anonymous function
+-Wrapped inside ()  -- to make it an expression
+-The last ()        -- invokes(calls) it immediately
+
+
+why we use IIFE-
+---------------
+- To run code immediately.
+- To protect variables from outside code.
+- To organize your code into private blocks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
