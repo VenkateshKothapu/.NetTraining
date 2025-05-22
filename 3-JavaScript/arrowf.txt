@@ -1,0 +1,23 @@
+Arrow functions(=>)
+--------------------
+An Arrow function is a shorter way to write function in javascript.
+it simplies the syntax compared to regular functions.
+Arrow functions are used for quick operstions and callbacks and help make the code look cleaner.
+
+this is the synatx for arrow function-
+
+()=>{                           
+    statement...1;
+    .
+    .
+    statement....2;
+}
+
+example-
+---------
+
+()=>{
+    console.log("hello");
+}
+
+
