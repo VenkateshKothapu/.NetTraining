@@ -1,0 +1,33 @@
+callback functions-
+----------------------
+
+A callback is a function you call back after something is finished
+
+functions can accept other functions as parameters.which are called callback functions
+these callbacks runs when the mainfunction has finished,giving you the ability to manage how the program proceeds
+
+example of callback-
+------------------------
+Imagine you are building a LEGO house 🧱
+When you're done building it, your mom says:
+
+“When you're done, call me, and I will take a photo of your house.”
+
+This Is a Callback!-
+
+You build the house ➡️ This is the main task (main function).
+
+Your mom takes a photo ➡️ This is the callback (something to do after you're done).
+
+simple code-
+
+function buildHouse(afterBuilding) {
+  console.log(" Building the house...");
+  afterBuilding(); // Call the other thing after you're done
+}
+
+function takePhoto() {
+  console.log(" Taking a photo of the house!");
+}
+
+buildHouse(takePhoto);
