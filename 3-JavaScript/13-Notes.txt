@@ -1,0 +1,118 @@
+
+Parameters & return values
+Template literals
+setTimeout
+setInterval 
+
+
+
+Different Ways to Write Functions-
+
+
+function showclotheslist(){
+    console.log("this is multibranded clothes list");
+}
+
+showclotheslist();
+
+---------------------------------------------------------------------
+Arrow function-
+----------------
+Imagine a function is like a magic box that does something for you — like printing a message, adding numbers, etc.
+
+There are two ways to make this box:
+
+The old way (Normal function)
+
+The new way (Arrow function – short and clean)
+  
+example-
+-----------
+
+let greet=()=>{
+    console.log("hello")
+
+}
+greet();
+
+
+
+
+
+
+
+
+
+
+
+Template Literals-
+------------------
+
+template literals is a way to insert variables inside the string
+it uses back tick mark `
+
+
+let name = "Venkatesh";
+let age = 25;
+
+let message = `My name is ${name} and I am ${age} years old.`;
+console.log(message);
+
+-------------------------------------------------------------------------
+
+
+
+setTimeout-
+----------
+A built in function that runs code once after a delay.
+
+like if we set the time for 3000 then it will execute the code after 3 seconds and shows the output
+ 
+ You want to say "Hello" after 3 seconds.
+
+ setTimeout(() => {
+    console.log("Hello after 3 seconds");
+}, 3000);
+------------
+let alarm()=>{
+    console.log("hey wake me at 5 am ")
+
+}
+
+setTimeout(alarm,5000);
+------------------------------------------------------------------------
+
+
+
+Now we will learn about 
+
+setInterval-
+-----------
+this setInterval is used to display the output again and again for for certain timeinterval we set.
+ setInterval()- Runs the same task again and again.
+setInterval() is a JavaScript built-in function.
+It’s used to repeat a task again and again after a fixed time gap.
+
+It takes 2 things:
+What to do – the function
+
+How often to do it – time in milliseconds
+
+let greet=()=>{
+    console.log("hello how are you");
+}
+setInterval(greet,2000);
+------------------
+
+Explanation (Simple Terms)
+
+() => { console.log("hello how are you"); } → What to do
+1000 → Wait 1 second, then repeat the task.
+It runs again and again every second
+
+
+
+
+
+
+
