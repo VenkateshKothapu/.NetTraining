@@ -1,0 +1,111 @@
+Topic: var, let, const — Variables in JavaScript
+
+Variables are like containers. They store data- like names,numbers,colors.
+
+JavaScript has 3 ways to declare variables:
+
+
+| Keyword | Scope           | Can be Reassigned? | Can be Redeclared? |
+| ------- | --------------- | ------------------ | ------------------ |
+| `var`   | Function/Global | ✅ Yes              | ✅ Yes              |
+| `let`   | Block (local)   | ✅ Yes              | ❌ No               |
+| `const` | Block (local)   | ❌ No (constant)    | ❌ No               |
+
+What is a block?
+
+A block is a group of code inside{.....}
+
+{
+    let color="blue";
+}
+--------------------------------
+
+var — Global or Function Scoped 
+
+var greencolor="green";
+
+greenColor is available everywhere, even inside blocks.
+var does not care about blocks.
+
+----------------------------------------------
+ let — Block Scoped (local to that block only).
+
+
+{
+  let blueColor = "blue";
+  console.log(blueColor); // ✅ Works here
+}
+
+console.log(blueColor); // ❌ Error: not defined
+----------
+let is local to the block { ... }.
+
+Outside the block, it doesn’t exist.
+
+-----------------------------------------------------------------
+
+const — Also Block Scoped, but cannot be changed
+
+const name = "Venkatesh";
+name = "John"; // ❌ Error: Assignment to constant variable
+
+
+Summary Notes-
+--------------
+🔑 var
+Global or function-scoped
+
+Accessible outside of blocks
+
+🔑 let
+Block-scoped (local to { })
+
+Not accessible outside the block
+
+🔑 const
+Same as let but can't be changed
+
+-----------------------------------------------------------------------
+Real-Life Example-
+---------
+
+Signal in house-
+
+var signalName = "Wi-fi"; // Global signal
+
+Room 1-
+
+{
+    let room1FanSpeed = "high"; // Only in Room 1
+}
+
+Room 2:
+------
+
+{
+    let room2FanSpeed = "slow"; // Only in Room 2
+}
+
+
+You can use the same signalName in all rooms (it's global)
+
+But each room has its own fan speed which is private (using let)
+---------------------------
+Notes to Write Down:
+Function Scope:
+
+Variables declared inside a function using var, let, or const are not available outside the function
+
+They are local to the function
+
+
+"Variables declared inside a function are like secrets. Only the function knows them. If you ask for them outside, JavaScript says ‘I don’t know that!’"
+
+Notes:
+
+let and const are block scoped — they live only inside the block {} where they are declared.
+
+Inner blocks can access outer block variables ✅
+
+Outer blocks cannot access inner block variables ❌
+
