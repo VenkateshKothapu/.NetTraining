@@ -1,0 +1,128 @@
+1.What is Debugging?
+----------------
+
+Debugging means finding and fixing errors(bugs) in your code.
+
+Imagine your code is like a machine, and if something’s not working, you need to open it up, check each part, and fix the problem — that’s debugging!
+
+
+
+2.Why Debugging Is Important-
+----------------------------
+ To understand whats goiong wrong 
+ To fix mistakes
+ To improve program step by step
+
+ Tools for Debugging in JavaScript-
+ -----------------------------------
+
+console.log() – Most basic tool
+
+Browser Developer Tools – Like Chrome DevTools
+
+Breakpoints – Pause the code while running
+
+Error messages – Read and understand errors
+
+
+ Ask 3 Questions When Debugging-
+ ------
+
+ | # | Question                       | Example                              |
+| - | ------------------------------ | ------------------------------------ |
+| 1 | **How** is it not working?     | Is it crashing? Wrong output?        |
+| 2 | **Why** is it happening?       | Is the variable wrong? Misspelled?   |
+| 3 | **What** can I change or test? | Add a log? Remove a line? Try again? |
+
+
+
+3. Read Error Messages Clearly-
+
+Tip:
+Don’t panic! Read the line number and the error type — it helps you find the problem.
+
+
+
+
+4.Debugging with Real Mistakes (and Fixes)-
+--------------
+
+let price = 100;
+let quantity = 2;
+
+let total = price * quntity;  // ❌ MISTAKE: 'quntity' is a typo
+
+console.log("Total Price is:", total);
+
+Debugging Steps:-
+--------------
+
+See the error:
+
+ReferenceError: quntity is not defined
+
+Ask: “How is it not working?”
+
+Program crashed.
+
+Ask: “Why is this happening?”
+
+Spelling mistake.
+
+Fix it:
+let total = price * quantity; // ✅ correct spelling
+-------------------------------------------------------------------
+
+
+
+ Understanding the Call Stack:-
+ -------------------
+
+ javascript reads the code line by line from top to bottom
+
+ if there is any function call it jumps into the function and after finishing executing or inspecting the function.
+it jumps out of the function .
+this "jumping in and out" is called the CallStack.
+
+
+now we will see one example:-
+----------------------
+
+function start(){
+
+    console.log("Lets start tommarow morning");
+}
+
+function stopping(){
+    start();
+    console.log("lets stop at nice place for lunch");
+}
+
+stopping();
+-----------------------
+
+here what happens in the above code 
+firstly we can see that we are calling stopping() function;
+in stopping() function we have start() so it prints the message in function start(), then it will go and print stopping()function,
+
+This stack helps you debug which function caused the issue
+
+
+example how to do debugging-
+-------------------
+
+
+function sayHello(name) {
+    return "Hello" + Name;
+}
+
+let greet = sayHello("Venkatesh");
+console.log(greet);
+
+What’s the bug?
+Can you fix it and explain the How, Why, What?
+
+
+
+
+

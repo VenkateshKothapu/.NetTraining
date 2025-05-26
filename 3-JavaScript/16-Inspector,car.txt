@@ -1,0 +1,61 @@
+we will discuss Debugging taking realworld scenarios-
+
+
+| Real World     | Code Example                |
+| -------------- | --------------------------- |
+| **Inspector**  | You (the Developer)         |
+| **Car**        | The JavaScript Code         |
+| **Highway**    | The Browser where code runs |
+| **Stop Point** | `debugger;`                 |
+
+
+now here we will take an example of checkposts on highways
+
+we can see inspectors at checkposts -that is we inspectors(developers)
+the car moving can be considerd as javascript code.
+the highway is considerd as browser where the code runs
+the stoppoint that is checkpoints is considerd as the debugger();
+
+
+So just like a traffic inspector stops cars to check them, you (the developer) stop the code using debugger to check what's going on inside.
+
+
+
+
+What You Can Do at debugger;
+See the value of variables
+
+Step through the code line by line
+
+Watch how the program moves forward
+-----
+
+(Imagine the browser is a road. Your code is a car driving smoothly.
+ Now, we developers can place a red STOP sign using debugger;. 
+ When the car (code) reaches this point, it stops. We can get out, open the engine (DevTools), and check everything — variables, speed, position.)
+
+What is debugger;?
+
+A tool that stops code execution for inspection.
+
+Opens browser DevTools → Sources tab
+
+Helps check variable values and program flow
+
+When to use it?
+
+When something’s going wrong and you want to check what's happening at a specific point.
+
+When you want to learn how your program flows, step by step.
+
+Debugging code techniques-
+---------------------
+debugger/Breakpoint:Pauses code execution at the specified point, allowing inspection in developer tools.
+
+Resume(F8): Continue Running code until the next breakpoint
+
+step Over(F10):Step over next line.
+
+step into(F11):Step into the function call.
+
+step out( shift + F11):Step out the current function and back to the callling function.
