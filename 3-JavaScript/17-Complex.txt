@@ -1,0 +1,74 @@
+
+Complex datatypes in javascript-
+------------------------------
+complex data types in javascript are the data structures which hold the multiple values or performs actions.
+the three most common complex types are
+1.Object
+2.Array
+3.Function
+
+object-object is a group of key value pairs
+
+property-A value inside an object(like strings,numbers,array etc).
+
+function- A method defined in an object to perform specific tasks
+
+example in js file-
+------------------
+
+var author = {
+    name         : "RabindraNathTagore",
+    dateofbirth  : "May 7, 1861",
+    books        : ["Gitanjali", "The Home and the World", "Gora"],
+    getBooksCount : function(){
+        return "Total Books are 3"
+    }
+}
+
+
+
+
+| Member Name     | Type     | Value                                             | Member Type |
+| --------------- | -------- | ------------------------------------------------- | ----------- |
+| `name`          | String   | `"RabindraNathTagore"`                            | Property    |
+| `dateofbirth`   | String   | `"May 7, 1861"`                                   | Property    |
+| `books`         | Array    | `["Gitanjali", "The Home and the World", "Gora"]` | Property    |
+| `getBooksCount` | Function | Returns a string `"Total Books are 3"`            | **Method**  |
+
+ getBooksCount is a method because it is a function inside an object.
+
+
+ name, dateofbirth, books → Properties
+
+ getBooksCount() → Method
+
+ document.writeln(author.name);
+ document.writeln(author.dateofbirth);
+ document.writeln(author.books);
+
+
+Show the author’s name, birth date, and book list in the HTML document (browser screen).
+
+document.writeln() writes directly to the browser’s page. 
+
+
+
+var result = author.getBooksCount();
+ Calls the method getBooksCount() from the author object.
+
+Stores the returned value ("Total Books are 3") in the variable result.
+
+console.log(result);
+Total Books are 3
+
+summary-
+-------
+| Concept                | Description                                                                 |
+| ---------------------- | --------------------------------------------------------------------------- |
+| **Object**             | Group of key-value pairs (complex type).                                    |
+| **Property**           | A key-value pair where the value is **data** (string, number, array, etc.). |
+| **Method**             | A key-value pair where the value is a **function** (performs an action).    |
+| **Accessing Members**  | Use `objectName.propertyName` or `objectName.methodName()`                  |
+| **document.writeln()** | Writes output to the **webpage**                                            |
+| **console.log()**      | Logs output to the **browser console**                                      |
+

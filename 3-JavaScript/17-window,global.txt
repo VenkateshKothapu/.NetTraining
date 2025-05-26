@@ -1,0 +1,46 @@
+
+ What is "window" in JavaScript?
+
+ in browsers the window object is the global object.
+
+ any variable declared globally with var becomes a property of the window.
+
+ Only globally declared variables (with var) become part of the window object.
+  Anything declared inside functions or with let / const is local and not accessible via window."
+
+
+  What is this?
+
+  this refers to the object that is currently executing the code.
+
+Its value depends on where and how a function or method is called.
+
+
+| Concept      | Usage                                                                                                          |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| **`window`** | Used to **access global variables/functions** from anywhere. It represents the **global object** (in browser). |
+| **`this`**   | Refers to the **current object** depending on *where* you're using it (object, function, constructor, etc.).   |
+
+
+
+ Use **window** when:
+ -------------------
+
+You want to access something defined globally (like global variables, alerts, location, etc.).
+
+var myName = "Venkatesh";
+console.log(window.myName); // ✅ works
+
+Use **this** when:
+------------------------------------------
+
+
+You want to access object’s own properties or inside a method.
+
+var person = {
+  name: "Venkatesh",
+  showName: function() {
+    console.log(this.name); // ✅ "Venkatesh"
+  }
+};
+
