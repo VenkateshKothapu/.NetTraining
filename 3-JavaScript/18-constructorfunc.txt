@@ -1,0 +1,29 @@
+ What is a Constructor Function?
+
+ Constructor Function: A blueprint to create many objects.
+
+A constructor function is a template used to create multiple similar objects using the new keyword.
+
+A constructor function is a special function in JavaScript used to create multiple similar objects easily.
+
+It works like a blueprint or template to build new objects with the new keyword.
+
+"Constructor = Object Maker using a Function"
+
+
+
+ Example:
+
+function Car(brand, color) {
+  this.brand = brand;
+  this.color = color;
+}
+
+const car1 = new Car("Toyota", "Red");
+const car2 = new Car("Honda", "Blue");
+-----------------
+
+this: Refers to the object being created.
+
+new keyword: Triggers object creation using the constructor.
+
