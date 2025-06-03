@@ -1,6 +1,11 @@
-// function sayHello(name) {
-//     return "Hello" + Name;
-// }
+let price =100;
+let quantity =2;
+let total= price*quanity;
+console.log("total price is :"+ total);
+
+
+
+
 
 // let greet = sayHello("Venkatesh");
 // console.log(greet);

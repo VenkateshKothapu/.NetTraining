@@ -48,3 +48,4 @@ document.writeln(schools.topschool);
 // But this only works if you're inside a function or method."
 
 
+members of ar

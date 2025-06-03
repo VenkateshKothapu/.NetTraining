@@ -36,3 +36,4 @@ bikes.prototype.showdetails=function(){
 }
 bike1.showdetails();
 bike2.showdetails();
+

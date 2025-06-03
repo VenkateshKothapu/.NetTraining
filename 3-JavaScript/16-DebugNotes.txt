@@ -1,9 +1,9 @@
 1.What is Debugging?
 ----------------
 
-Debugging means finding and fixing errors(bugs) in your code.
+Debugging means finding and fixing errors(bugs) in our code.
 
-Imagine your code is like a machine, and if something’s not working, you need to open it up, check each part, and fix the problem — that’s debugging!
+Imagine our code is like a machine, and if something’s not working, we need to open it up, check each part, and fix the problem — that’s debugging!
 
 
 
@@ -50,7 +50,7 @@ Don’t panic! Read the line number and the error type — it helps you find the
 let price = 100;
 let quantity = 2;
 
-let total = price * quntity;  // ❌ MISTAKE: 'quntity' is a typo
+let total = price * quntity;  //  MISTAKE: 'quntity' is a typo
 
 console.log("Total Price is:", total);
 
@@ -122,7 +122,7 @@ console.log(greet);
 What’s the bug?
 Can you fix it and explain the How, Why, What?
 
-
+     
 
 
 
