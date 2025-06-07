@@ -1,0 +1,527 @@
+today im learning about loops mechanism.
+
+
+loop-
+-------
+loop is used to repat a block of code multiple times automatically.
+instead of writing same lines multiple times we use loop to save the time and effort
+
+why do we use loops-?
+-----------
+
+we use loops to repeat certain block of code multiple number of times
+we use loops to automate the tasks like printing numbers,iterating arrays,etc.
+make code short clean and powerful.
+
+types of loops in javascript-
+------------------
+
+for loop
+while loop
+do...while
+for...in
+for...of
+---------------------------
+
+loops= repetation made easy
+use loops when you want to repeat something based on a condition or count.
+------------------------------
+
+what is for loop in javascript?
+
+for loop:-
+--------
+for loops is used to when you want to repeat a certain block of code a fixed number of times
+
+example- if teacher says clap your hands five times
+
+we write-
+console.log("clap");
+console.log("clap");
+console.log("clap");
+console.log("clap");
+console.log("clap");
+
+ we use  a loop to automate the clapping like this.
+
+ first we will know the syntax for loop-
+  
+  for(start;condition;update){
+    //code to repeat
+  }
+
+  example-
+  ------
+  for (let i=1;i<=5;i++){
+    console.log("clap");
+  }
+
+  this single line will print "clap" 5 times.
+
+Breakdown-
+----------
+let i=1 ----> starts from 1 (first loop)
+i<=5  ---------> repeats as long as i is lessthan or equal to 5.
+i++ -----------> increase i by 1 after each time(move to next clap)
+console.log("clap")-----> print "clap" each time.
+
+
+key idea-
+--------
+starts at i=1
+checks if i<=5 ?
+if yes--> runs the code inside.
+then increases i by 1.
+repeats until condition fails(i>5).
+
+visual flow-
+----------
+start-->checks condition-->run code-->increase i--->check again.
+
+like a cycle that keeps going until the condition becomes false.
+---------------------------------------------------------------
+
+
+Scope note-
+---------
+using let keeps the variable (i) inside the loop,which is safer and avoid bugs.
+
+
+real-world loop use-case-
+--------------------------
+Example: Printing student roll numbers from 1 to 30
+
+for (let roll = 1; roll <= 30; roll++) {
+  console.log("Roll Number: " + roll);
+}
+-----------------------------------------
+example-
+--------
+
+
+var studentsdata=[
+    {rollnumber:1,studentname:"john wick",marks:80},
+    {rollnumber:2,studentname:"brad pitt",marks:90},
+    {rollnumber:3,studentname:"venky",marks:100},
+    {rollnumber:4,studentname:"eldecaprio",marks:95},
+    {rollnumber:5,studentname:"varma",marks:100}
+]
+
+for (var rollnumber=0;rollnumber<studentsdata.length;rollnumber=rollnumber+1){
+    console.log(studentsdata[rollnumber]);
+}
+
+For Loop Summary:
+-----------------
+Used for repeating code a known number of times
+
+Has 3 parts: start, condition, and update
+
+Safer with let
+
+Easy to read, saves time, and reduces errors
+
+
+
+----------------------------------------------------------------------------------
+
+lets discuss while loop now:-
+------------------------------
+while loop-
+A while loop is used to repeat a block of code again and again, as long as the condition is true.
+while loop is used when you want to repeat something and you dont know exactly how many times.
+ you only know the condition and you want to keep going while the condition is true.  
+
+Real-Life Example:
+Let’s say:
+
+ "I will keep walking while it's not raining."
+
+You don’t know how many minutes you’ll walk
+
+You just know: if it rains → stop
+
+Until then → keep walking
+
+That is a while loop.
+
+
+syntax for while loop is-
+------------------------
+
+while (condition){
+    //code to run again and again
+}
+
+exmaple-
+
+let i = 1; // starting point
+
+while (i <= 5) {        // condition to check
+  console.log("clap");       // code to run repeatedly
+  i++;                  // update the value of i
+}
+
+1. let i = 1;
+👉 You are starting with i = 1. Think of it as a counter to count how many claps.
+
+2. while (i <= 5)
+👉 This is the condition.
+It means: “Keep doing this while i is less than or equal to 5.”
+
+So, this loop will keep going as long as i is 1, 2, 3, 4, or 5.
+
+3. { console.log("clap"); i++; }
+👉 This is the body of the loop. It runs every time the condition is true.
+
+console.log("clap") → prints “clap” to the screen
+
+i++ → increases the counter by 1
+
+
+| Step | `i` value | Is `i <= 5`? | Print "clap"? | Then...     |
+| ---- | --------- | ------------ | ------------- | ----------- |
+| 1    | 1         | Yes ✅        | Yes           | i becomes 2 |
+| 2    | 2         | Yes ✅        | Yes           | i becomes 3 |
+| 3    | 3         | Yes ✅        | Yes           | i becomes 4 |
+| 4    | 4         | Yes ✅        | Yes           | i becomes 5 |
+| 5    | 5         | Yes ✅        | Yes           | i becomes 6 |
+| 6    | 6         | ❌ No         | STOP LOOP     | Done ✅      |
+
+
+
+
+
+
+-------------------------------------------
+
+ what’s the difference between for and while?
+
+ | Feature        | `for` loop                                           | `while` loop                              |
+| -------------- | ---------------------------------------------------- | ----------------------------------------- |
+| Best used when | You **know how many times** to repeat                | You **don’t know exactly** how many times |
+| Declaration    | All 3 parts in one line (`start; condition; change`) | Only the **condition** is written         |
+| Cleaner for... | Fixed-count tasks (e.g., print 1–5)                  | Unknown-count tasks (e.g., wait until X)  |
+
+
+
+
+***Now we are moving to (do while) loop:-
+-----------------------------------
+A do while loop is similar to while loop ,But with one big difference
+it runs at least once, even the condition is false.
+
+do {
+    // run this code
+} while (condition);
+
+lets see one simple number loop-
+---------------------------------
+
+var i = 10;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+this prints 10 at least once because we have written do while it means prints at least once even the condition is false
+  
+now we will se one more example
+
+var studentsdata = [
+    { rollnumber: 1, studentname: "john wick", marks: 80 },
+    { rollnumber: 2, studentname: "brad pitt", marks: 90 },
+    { rollnumber: 3, studentname: "venky", marks: 100 },
+    { rollnumber: 4, studentname: "eldecaprio", marks: 95 },
+    { rollnumber: 5, studentname: "varma", marks: 100 }
+]
+
+var i = 0;
+
+do {
+    console.log(studentsdata[i].studentname);
+    i++;
+} while (i < studentsdata.length);
+
+----------------------------------------
+the above code is explained here-
+
+1.var studentsdata = [ ... ];
+This creates an array of 5 student objects, each with:
+
+rollnumber
+
+studentname
+
+marks
+
+✅ This is your dataset.
+
+
+2. var i = 0;
+You're starting a counter i at 0.
+In programming, arrays start at index 0, so studentsdata[0] is the first student.
+
+
+Step 3:
+do {
+    console.log(studentsdata[i].studentname);
+    i++;
+} while (i < studentsdata.length);
+Let’s break this part inside:
+
+🔄 do { ... } while (condition)
+This loop always runs at least once, even if the condition is false.
+
+4.✅ Inside the loop:
+
+console.log(studentsdata[i].studentname);
+➡ This prints the name of the student at index i
+
+First time → prints studentsdata[0].studentname → "john wick"
+
+
+5.i++;
+➡ After printing, it increases i by 1 → so the next loop will move to the next student.
+
+
+6.--> Loop condition:
+
+while (i < studentsdata.length);
+It checks if i is still within the array length (5 students).
+
+When i reaches 5, the loop stops.
+
+
+7.-->Final Output:
+
+john wick
+brad pitt
+venky
+eldecaprio
+varma
+
+
+-------------------------------------------------------------------------------------------
+
+now we are moving to (for..of)-
+
+A for loop is used to loop through each each value in something like array
+it helps us go through each item one by one, automatically ,without writing complex code
+
+ Step 2: Basic Syntax
+ ------------
+
+for (let element of array) {
+    // code to run for each element
+}
+
+
+Explanation:
+
+array — the list you want to loop over
+
+element — each item in the array, one at a time
+
+let — we create a temporary variable to store each value
+
+
+
+Step 3: Let's Create an Array-
+
+var fruits["mango","apple","mango"];
+
+This array has 3 strings.
+
+Step 4: Loop Using for...of
+
+for(let fruit of fruits){
+  console.log(fruit);
+}
+
+
+
+What’s happening?
+
+for...of is a loop that goes through each value in the array — one by one.
+
+"Hey JavaScript, take each fruit from the fruits array, one by one, and give it to me in the variable fruit."
+
+On first loop: fruit = "apple"
+
+On second loop: fruit = "banana"
+
+On third loop: fruit = "mango"
+
+Each value is printed using console.log(fruit);
+
+
+Step 4: First loop
+fruit = 'apple'
+
+Executes: console.log(fruit) → prints apple
+
+Step 5: Second loop
+fruit = 'banana'
+
+Executes: console.log(fruit) → prints banana
+
+Step 6: Third loop
+fruit = 'mango'
+
+Executes: console.log(fruit) → prints mango
+
+output-
+--------
+apple
+banana
+mango
+
+loop Summary-
+--------------
+
+| Loop Number | `fruit` value | What gets printed |
+| ----------- | ------------- | ----------------- |
+| 1           | 'apple'       | apple             |
+| 2           | 'banana'      | banana            |
+| 3           | 'mango'       | mango             |
+
+
+
+exmaple 2-
+--------
+
+var string="javascript"
+for(let print of string){
+    console.log(print)
+}
+output-
+
+j
+a
+v
+a
+s
+c
+r
+i
+p
+t
+
+
+Why does this happen?
+Because in JavaScript:
+
+A string is also an iterable — just like an array.
+When you use for...of on a string, it goes letter by letter, not the whole string at once.
+
+So, it’s the same as saying:
+
+
+| You used `for...of` on | It gives you            |
+| ---------------------- | ----------------------- |
+| An array               | Each item (value)       |
+| A string               | Each character (letter) |
+
+--------------------------------------------------------------------------------
+
+
+Now learning For...in loop-
+
+The for...in loop is used to loop over the keys (property names) of an object or the indexes of an array.
+
+It gives you the key/index, not the value directly.
+
+Syntax-
+
+for (let key in object) {
+    // use the key here
+}
+
+key is a variable that will hold the property name or index on each loop.
+
+object is the object or array you want to loop through.
+
+Looping over an Object-
+
+var student = {
+    name: "venky",
+    marks: 100,
+    rollnumber: 3
+};
+
+for (let key in student) {
+    console.log(key);
+}
+
+Output:
+
+name
+marks
+rollnumber
+
+Step : Getting the Values inside the Loop
+
+for (let key in student) {
+    console.log(key + ": " + student[key]);
+}
+
+
+key is each property name in the object one by one (like "name", "marks", "rollnumber").
+
+student[key] is how you get the value of that property.
+
+
+name: venky
+marks: 100
+rollnumber: 3
+
+Why do we use student[key]?
+Because key is a variable holding the property name.
+
+For example:
+
+When key is "name", student[key] means student["name"] → "venky".
+
+When key is "marks", student[key] means student["marks"] → 100.
+
+
+Quick analogy:
+
+key = the label on a box
+
+student[key] = opening the box to see what’s inside
+
+----------
+
+Looping over an Array using for...in
+
+
+var fruits = ["apple", "banana", "mango"];
+
+for (let index in fruits) {
+    console.log(index + ": " + fruits[index]);
+}
+
+
+Output-
+
+0: apple
+1: banana
+2: mango
+
+
+Important Notes:-
+
+for...in --> loops over keys or indexes.
+
+When looping arrays, it gives the index number — not the value directly.
+
+For arrays, for...of is usually better if you want the values.
+
+For objects, for...in is very useful to get all keys.
+
+
+
+
