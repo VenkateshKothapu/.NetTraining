@@ -31,3 +31,51 @@ function takePhoto() {
 }
 
 buildHouse(takePhoto);
+
+
+example for callback-
+---------------------
+function messageone() {
+    console.log("hey call me when you are done");
+}
+
+function messagetwo(info) {
+    info();                         // ← runs messageone()
+    console.log("this is message two");
+}
+
+messagetwo(messageone);
+------------------------------------------------
+
+
+Code Explanation (like a story)-
+
+You created a function messageone()
+→ It says: "hey call me when you are done"
+
+Then you made another function messagetwo(info)
+→ It says: “Run this function I got (info()), then print message two.”
+
+You called messagetwo(messageone)
+→ That means: pass messageone into messagetwo
+
+So now:
+
+info = messageone
+
+info() becomes messageone()
+
+Both messages print correctly
+
+🔥 Summary:
+messageone is passed into messagetwo
+Inside messagetwo, it runs messageone()
+Then prints its own line.
+
+You just did a callback
+
+
+
+
+
+
