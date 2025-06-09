@@ -1,0 +1,110 @@
+calltype-
+---------
+
+calltype refers to how functions or operations are executed in program . weather one after another or independently and it determines the
+flow of execution. either sychronously or asynchronously.
+
+calltypes are classified into two types:-
+
+1.synchronous call.
+2.Asynchronous call.
+
+*synchronous call-
+-----------------
+synchronous call is a type of execution where tasks run sequentially, one after another. each task must be completed fully
+before the next one begins
+
+
+                    lets start
+                       |
+                      step1
+                       |
+                      step2
+                       |
+                      step3
+
+*asynchronous call-
+------------------
+asynchronous call is a type of execution where tasks run independently without waiting
+the program starts the next test without waiting for the previous one to complete
+
+                      lets start
+                      |      |      |
+                      step1  step2  step3
+
+--------------------------------------------------------------
+
+1.Synchronous Call — "One After Another"
+
+In synchronous execution, each line waits for the previous one to finish before running.
+
+
+Real-Life Example:
+Imagine you are:
+
+Brushing your teeth
+
+Taking a bath
+
+Eating breakfast
+
+👉 You do one task completely before starting the next one.
+
+
+console.log("Step 1: Brushing");
+console.log("Step 2: Bathing");
+console.log("Step 3: Breakfast");
+
+ Output-
+ ------
+
+Step 1: Brushing
+Step 2: Bathing
+Step 3: Breakfast
+
+One line runs after the previous line finishes — no skipping, no waiting.
+
+2. Asynchronous Call — "All at Once"
+
+ Definition:
+In asynchronous execution, some tasks don’t wait. They run in the background, and your program continues without waiting for them to finish.
+
+Real-Life Example:
+You:
+
+Order food (this takes time ⏳)
+
+While it’s cooking, you watch a movie 🎬
+
+Then eat food when it’s ready 🍱
+
+👉 You're not waiting for the food — you're doing something else in the meantime.
+
+JavaScript Example:-
+------------------
+
+console.log("Step 1: Ordering food");
+
+setTimeout(function () {
+  console.log("Step 2: Food is ready 🍱");
+}, 3000); // wait for 3 seconds
+
+console.log("Step 3: Watching movie 🎬");
+
+ Output:-
+
+ Step 1: Ordering food
+Step 3: Watching movie 🎬
+Step 2: Food is ready 🍱    <-- comes last, after 3 seconds
+
+
+ setTimeout() is an asynchronous function. It tells JavaScript:
+
+“Do this later, but continue with the rest of the program now.”
+
+
+
+| Type         | Behavior                                     | Real-Life Example        | JS Example Function                        |
+| ------------ | -------------------------------------------- | ------------------------ | ------------------------------------------ |
+| Synchronous  | Waits for each task to finish (line by line) | Brush → Bath → Eat       | `console.log()`                            |
+| Asynchronous | Doesn't wait; runs in background             | Order food → Watch → Eat | `setTimeout()`, `fetch()`, `setInterval()` |
