@@ -1,0 +1,119 @@
+ Step 1: What is a Callback?
+A callback is a function passed into another function to run after some task is done.
+
+We already did:
+
+wakeUp(function() {
+  brushTeeth(function() {
+    goToSchool();
+  });
+});
+
+
+Step 2: What is Callback Hell?
+
+Callback Hell happens when:
+
+You have many functions one after another
+
+Each function depends on the previous one
+
+So you nest callbacks inside callbacks inside callbacks...
+
+It becomes very deep, messy, and hard to read
+
+
+Step 3: Real-Life Example (Nested too much)
+
+Let’s say you have 5 steps in the morning:
+
+Wake up
+
+Brush teeth
+
+Take a bath
+
+Eat breakfast
+
+Go to school
+
+
+Here’s what Callback Hell looks like-
+
+function wakeUp(next) {
+  console.log("1. Woke up");
+  next();
+}
+
+function brushTeeth(next) {
+  console.log("2. Brushed teeth");
+  next();
+}
+
+function takeBath(next) {
+  console.log("3. Took a bath");
+  next();
+}
+
+function eatBreakfast(next) {
+  console.log("4. Ate breakfast");
+  next();
+}
+
+function goToSchool() {
+  console.log("5. Went to school");
+}
+
+// ⚠️ CALLBACK HELL
+wakeUp(function() {
+  brushTeeth(function() {
+    takeBath(function() {
+      eatBreakfast(function() {
+        goToSchool();
+      });
+    });
+  });
+});
+
+
+Problem with This Code:-
+------------------------
+Problem	Why it’s bad
+Hard to read	Too many } and ) mixed up
+Hard to debug	If one part fails, fixing is hard
+Hard to maintain	Adding/removing steps is confusing
+Code looks like a pyramid .Too much indentation
+
+
+Summary for Notes:-
+------------------
+Callback = function passed to another function
+
+It causes:
+
+Messy code
+
+Hard to read/maintain
+
+Lots of indentation
+----------------
+
+Way to Remember:-
+---------------
+Think of callback hell like getting stuck in traffic 🚗🚗🚗🚗🚗 — you can’t move ahead easily, and everything is chained.
+Callback Hell = too many nested callbacks
+
+
+Final Notes on Callback Hell:-
+------------------------------
+
+Callback Hell is not an error — it’s a code style problem.
+
+Happens when we depend on sequence, and use many nested callbacks.
+
+The fix is using Promises or Async/Await, which make code cleaner and easier to read.
+
+
+
+
+
